@@ -1,0 +1,33 @@
+- hosts: tobo,samo
+  tasks:
+    - name: set variable 'RSX_MINECRAFT_USER'
+      lineinfile:
+        path: ~/.bashrc
+        regexp: 'RSX_MINECRAFT_USER'
+        insertafter: EOL
+        firstmatch: yes
+        line: 'export RSX_MINECRAFT_USER={{ RSX_MINECRAFT_USER }}'
+    - name: copy rsync script to destination
+      copy:
+        src: ./files/sync_minecraft
+        dest: ~/bulk/minecraft_sync/
+        mode: a+x
+    - name: copy rsync script to destination
+      copy:
+        src: ./files/sync_minecraft_initial
+        dest: ~/bulk/minecraft_sync/
+        mode: a+x
+    - name: copy icon for desktop shortcut
+      copy:
+        src: ./files/minecraft_icon.png
+        dest: ~/bulk/minecraft_sync/
+    - name: copy minecraft shortcut to Desktop
+      copy:
+        src: ./files/MultiMC.desktop
+        dest: ~/Desktop/
+        mode: a+x
+    - name: copy sync shortcut to Desktop
+      copy:
+        src: ./files/sync_minecraft.desktop
+        dest: ~/Desktop/
+        mode: a+x
