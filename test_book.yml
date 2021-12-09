@@ -2,5 +2,5 @@
   tasks:
     - name: Creates directory
       file:
-        path: ~/tmp/{{ RSX_MINECRAFT_USER }}
+        path: ~/tmp/{{RSX_MINECRAFT_USER}}
         state: directory
