@@ -1,4 +1,4 @@
-- hosts: samko
+- hosts: samo
   tasks:
     - name: Creates directory
       file:
