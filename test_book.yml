@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: samko
   tasks:
     - name: Creates directory
       file:
