@@ -1,7 +1,6 @@
 - hosts: localhost
   tasks:
-    - name: install htop
-      become: yes
-      package:
-        name: htop
-        state: present
+    - name: Creates directory
+      file:
+        path: ~/tmp/test_1
+        state: directory
