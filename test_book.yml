@@ -2,12 +2,12 @@
   tasks:
     - name: Creates directory
       file:
-        path: ~/tmp/{{RSX_MINECRAFT_USER}}
+        path: /tmp/{{RSX_MINECRAFT_USER}}
         state: directory
   tasks:
     - name: Creates directory
       file:
-        path: ~/tmp/{{evn_var}}
+        path: /tmp/{{evn_var}}
         state: directory
 
 
