@@ -1,0 +1,7 @@
+- hosts: tobo
+  tasks:
+    - name: Copy rsync script to destination
+      ansible.posix.synchronize:
+        src: ~/.var/app/org.polymc.PolyMC/data/PolyMC/
+        dest: ~/.var/app/org.polymc.PolyMC/data/PolyMC/
+        delete: yes
